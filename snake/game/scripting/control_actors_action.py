@@ -46,4 +46,6 @@ class ControlActorsAction(Action):
             self._direction = Point(0, constants.CELL_SIZE)
         
         snake = cast.get_first_actor("snakes")
-        snake.turn_head(self._direction)
+
+        if not self._direction.equals(snake.get_head().get_velocity().reverse()):
+            snake.turn_head(self._direction)
