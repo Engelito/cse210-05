@@ -5,7 +5,7 @@ from game.casting.food import Food
 from game.casting.score import Score
 from game.casting.snake import Snake
 from game.scripting.script import Script
-from snake.game.scripting.control_actors_action_2player import ControlActorsAction2Player
+from game.scripting.control_actors_action_2player import ControlActorsAction2Player
 from game.scripting.move_actors_action import MoveActorsAction
 from game.scripting.handle_collisions_action import HandleCollisionsAction
 from game.scripting.draw_actors_action import DrawActorsAction
