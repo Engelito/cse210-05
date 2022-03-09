@@ -14,6 +14,7 @@ class ControlActorsAction2Player(ControlActorsAction):
     """
     def __init__(self, keyboard_service):
         super().__init__(keyboard_service)
+
     def execute(self, cast, script):
         """Executes the control actors action.
 
@@ -43,7 +44,7 @@ class ControlActorsAction2Player(ControlActorsAction):
             self._direction = Point(0, constants.CELL_SIZE)
         
         # make sure the player isn't trying to turn the snake on itself
-        if self._direction.equals(snake1.get_head().get_velocity().reverse()):
+        if not self._direction.equals(snake1.get_head().get_velocity().reverse()):
             snake1.turn_head(self._direction)
         
 
@@ -66,7 +67,7 @@ class ControlActorsAction2Player(ControlActorsAction):
             self._direction = Point(0, constants.CELL_SIZE)
         
         # make sure the player isn't trying to turn the snake on itself
-        if self._direction.equals(snake2.get_head().get_velocity().reverse()):
+        if not self._direction.equals(snake2.get_head().get_velocity().reverse()):
             snake2.turn_head(self._direction)
         
 
