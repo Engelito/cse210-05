@@ -1,6 +1,6 @@
 from game.scripting.handle_collisions_action import HandleCollisionsAction
 
-class SecondSnake(HandleCollisionsAction):
+class HandleCollisionSecondSnake(HandleCollisionsAction):
     def _handle_segment_collision(self, cast):
         snake1 = cast.get_first_actor("snake1")
         snake2 = cast.get_first_actor("snake2")
