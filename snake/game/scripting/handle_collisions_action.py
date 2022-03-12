@@ -50,19 +50,19 @@ class HandleCollisionsAction(Action):
             cast (Cast): The cast of Actors in the game.
         """
         if self._is_game_over:
-            snake = cast.get_first_actor("snakes")
-            segments = snake.get_segments()
+            for snake in cast.get_actors("snakes"):
+                segments = snake.get_segments()
 
-            snake.set_color(constants.WHITE)
+                snake.set_color(constants.WHITE)
 
-            x = int(constants.MAX_X / 2)
-            y = int(constants.MAX_Y / 2)
-            position = Point(x, y)
+                x = int(constants.MAX_X / 2)
+                y = int(constants.MAX_Y / 2)
+                position = Point(x, y)
 
-            message = Actor()
-            message.set_text("Game Over!")
-            message.set_position(position)
-            cast.add_actor("messages", message)
+                message = Actor()
+                message.set_text("Game Over!")
+                message.set_position(position)
+                cast.add_actor("messages", message)
 
-            for segment in segments:
-                segment.set_color(constants.WHITE)
+                for segment in segments:
+                    segment.set_color(constants.WHITE)

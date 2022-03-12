@@ -4,6 +4,9 @@ from game.casting.actor import Actor
 from game.shared.point import Point
 
 class Snake_blue(Snake):
+    def __init__(self):
+        super().__init__()
+        self.set_color(constants.LBLUE)
 
     def grow_tail(self, number_of_segments):
         for i in range(number_of_segments):
@@ -16,7 +19,7 @@ class Snake_blue(Snake):
             segment.set_position(position)
             segment.set_velocity(velocity)
             segment.set_text("#")
-            segment.set_color(constants.LBLUE)
+            segment.set_color(self._color)
             self._segments.append(segment)
     
     def _prepare_body(self):
