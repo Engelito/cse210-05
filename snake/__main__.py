@@ -27,11 +27,11 @@ def main():
     cast.add_actor("snakes", Snake_blue())
 
     score1 = Score()
-    score1.set_position(Point(0, 0))
+    score1.set_position(Point(0, -1))
     cast.add_actor("scores", score1)
 
     score2 = Score()
-    score2.set_position(Point(round(constants.MAX_X/2), 0))
+    score2.set_position(Point(round(constants.MAX_X/2), -1))
     cast.add_actor("scores", score2)
    
     # start the game
