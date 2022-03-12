@@ -53,6 +53,8 @@ class HandleCollisionsAction(Action):
             snake = cast.get_first_actor("snakes")
             segments = snake.get_segments()
 
+            snake.set_color(constants.WHITE)
+
             x = int(constants.MAX_X / 2)
             y = int(constants.MAX_Y / 2)
             position = Point(x, y)
